@@ -1,11 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .container{
+            width: 90vh;
+        }
+        body{
+        background: #FFFFFF;
+        color:#161616;
+        font-family: 'Lato', sans-serif;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        }
+
+        /*-- NAVBAR --*/
+        nav{    
+        text-align: center;
+        text-decoration: none;
+        height: 6vh;
+        display: flex;
+        width: 100vw;   
+        }
+        nav>ul{
+        min-width: 30vw;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap; 
+        flex: 10;
+        margin-right:5%;
+        height: 30px;   
+        }
+        nav>ul>li{
+        margin: 3px;
+        padding: 2px;
+        height: 5vh;
+        z-index:1;
+        color: white;
+        padding-top:2vh;
+        }
+        /*------ END NAVBAR ---------*/
+
+        .border{ /*BORDA QUE FAZ AS DIVIÇÕES DA PÁGINA*/
+        height: 2vh;
+        justify-content:space-between;   
+        width: 100vw; 
+        font-weight:900;
+        }
+        .border{
+
+        }
+
+        /*CLASSES AUXILIARES*/
+        .mt-3{
+        margin-top: 3vh;
+        }
+        .mt-5{
+        margin-top: 4vh;
+        }
+        .between{
+        justify-content: space-between;
+        }
+        .around{
+        justify-content:space-evenly;
+        }
+        .ml{
+        margin-left: 5%;
+        }
+        .mr{
+        margin-right: 5%;     
+        }
+        .d-flex{
+            display:flex;
+        }  
+        .container{
+        display: flex;
+        width: 100vw;
+        }
+        /*------- AUXILARES END----------*/
+
+     .banner{
+        background-image: url('./assets/background.png');
+        background-position: center;
+        background-size: 100%; 
+        width: 100vw;
+        height: 30vh;
+        justify-content: center;
+     }
+    
+    .logo{ /*BANNER ABAIXO DA NAVBAR*/
+         margin-top: 5vh;
+         width: 50vh;
+        height: 20vh;
+    
+   
+        }
+        section{ /*CONTAINER PRODUTS*/
+            width: 90vw;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+
+        }
+        /*CLASSES DOS PRODUTOS*/
+        .card{
+        height: 300px;
+        width: 33vw;
+        min-width: 190px;    
+        } 
+        .card> img{      
+        width: 200px;
+        height: 250px;;
+        max-width: 300px;
+        }     
+        .price{
+        font-size: 20px;
+        color: #5CA720;
+        font-weight: 400;
+        }
+        .description{
+        font-size: 14px;
+        color: black;
+        font-weight: 800;
+        overflow-wrap:break-word;
+        overflow: visible;
+        max-width: 200px;
+        }
+        .flex-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 1 33%;
+        margin:0;
+        }
+        
+    
+        /*END CLASSES DOS PRODUTOS*/
+
+        @media screen and (max-width: 450px){
+        .card{
+        height: 300px;
+        width: 40vw;
+        min-width: 180px;
+        }
+        .card> img{          
+        width: 85%;    
+        height: 70%;  
+        }
+        .flex-item{
+        flex-direction: column;
+        align-items: center;
+        flex: 0 1 48%;
+        margin: 2px;
+        text-align: start;
+        }
+        .flex-item>img{
+        align-items: center;
+        }
+          
+        }
+    /*MEDIAS END*/
+
+    
+        hr{
+            color: #A5A1A1,2%;
+            border: 0,0px solid; 
+        }
+
+        a{ 
+            color: #5CA720;
+            margin-top:5px;
+            margin-right:20%;
+            padding-top:50px;
+           }
+        a:hover{
+            color:#a3da76;
+        }
+        .title{
+            margin-left: 3%;
+            padding-top:2vh;
+            
+        }
+        .small-text{
+        font-size: 14px;
+        }
+        footer{
+        background: #F9F9F9;
+        width: 100vw;
+        height: 25vh;
+        position: absolute;
+        justify-content: space-around;
+        }
+        form>input{
+            height: 25px;
+            border: none; 
+            height: 3vh;
+            margin: 0;
+        }
+        .btn-green{
+            background-color: #5CA720;
+            border-radius: 3px;
+            height: 3vh;
+            width:  6vw;
+            color: white;
+            font-weight: 400;
+        }
+            
+
+        .flex-column{
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .small-img{
+        width: 100px;
+        }
+
+
+        .item-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40vw;
+        }
+
+        .bold{
+
+        }
+
+
+    </style>
+<nav>
+    <div class="title"><i class="fa fa-fw fa-star"> </i> Titulo</div>
+<ul>
+    <li><a href="default.asp"><i class="fa fa-fw fa-search"> </i></a></li>
+    <li><a href="news.asp"><i class="far fa-fw fa-user"></i></a></li>
+    <li><a href="contact.asp"><i class="fa fas-fw fa-shopping-cart"></i></a></li>
+
+  </ul>
+</nav>
 </head>
 <body>
+    <div class="banner d-flex">
     
+            <img  class="logo"src="assets/logo.png" alt="">
+        
+    </div>
+
+<div class="border d-flex">
+    <p class="ml">PROMOÇÃO</p>
+    <p class="small-text mr">9 produtos</p>
+</div>
+<section class="between mt-3">
+<div class="card flex-item">
+   <img class="product-image" src="./assets/01.jpg" alt="">
+   <p class="description">Lorem ipsum dolor sit</p>
+   <p>R$:<label class="price"> 50:00</label></p>
+</div> 
+<div class="card flex-item">
+    <img class="product-image" src="./assets/02.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+ <div class="card flex-item">
+    <img class="product-image" src="./assets/03.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+ <div class="card flex-item">
+    <img class="product-image" src="./assets/04.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+ <div class="card flex-item">
+    <img class="product-image" src="./assets/05.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+ <div class="card flex-item">
+    <img class="product-image" src="./assets/06.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+ <div class="card flex-item">
+    <img class="product-image" src="./assets/07.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+ <div class="card flex-item">
+    <img class="product-image" src="./assets/08.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+ <div class="card flex-item">
+    <img class="product-image" src="./assets/09.jpg" alt="">
+    <p class="description">Lorem ipsum dolor sit</p>
+    <p>R$:<label class="price"> 50:00</label></p>
+ </div> 
+
+</section>
+
+<footer class="flex-column">
+    
+    <div class="mt-5 d-flex around"> 
+
+        <div class="item-footer">
+            <p>Contato</p>
+            <p>Termo de Servico</p>
+            <p>Politica de privacidade</p>
+            <p>Cancelamento, troca e reembolso</p>
+            <img class="small-img mt-3" src="./assets/redes.png" alt="">
+        </div>
+
+        <div class="item-footer">
+            <form class="mt-5 ml" action="">
+                <p>Newslatter</p>
+                <input type="text">
+                <input class="btn-green "type="submit" value="enviar">  
+            </form>
+            <img class="small-img mt-3" src="./assets/cartaoes.png" alt="">            
+        </div>
+ 
+
+     
+    </div>
+
+ 
+   
+</footer>
 </body>
 </html>
